@@ -42,6 +42,8 @@ class ViewController: UIViewController {
         
         // here i could just use "sender" instead of "mailButton" if i wanted to.
         mailButton.setTitle("Mail Sent", forState: UIControlState.Normal)
+        
+        // empty comment to commit
     }
     
 }
