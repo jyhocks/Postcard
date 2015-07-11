@@ -11,7 +11,8 @@ import UIKit
 class ViewController: UIViewController {
 
     @IBOutlet weak var messageLabel: UILabel!
-    @IBOutlet weak var enterNameTextFiield: UITextField!
+    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var enterNameTextField: UITextField!
     @IBOutlet weak var enterMessageTextField: UITextField!
     @IBOutlet weak var mailButton: UIButton!
     
@@ -34,11 +35,15 @@ class ViewController: UIViewController {
         messageLabel.textColor = UIColor.orangeColor()
         messageLabel.hidden = false
         
+        nameLabel.text = "Dear " + enterNameTextField.text + ","
+        nameLabel.textColor = UIColor.blueColor()
+        nameLabel.hidden = false
+        
         enterMessageTextField.text = ""
-        
-        
                               // Make the keyboard "go away"
         enterMessageTextField.resignFirstResponder()
+        
+        enterNameTextField.text = ""
         
         // here i could just use "sender" instead of "mailButton" if i wanted to.
         mailButton.setTitle("Mail Sent", forState: UIControlState.Normal)
